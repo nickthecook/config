@@ -87,7 +87,7 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 export PATH="$PATH:$HOME/versions/3.7.7/bin"
 
-source .ruby.zsh
+source "$HOME/.ruby.zsh"
 
 export THOR_MERGE="code -d $1 $2"
 export EDITOR="vim"
@@ -104,3 +104,4 @@ source "$HOME/.cargo/env"
 ## end custom
 
 fpath+=${ZDOTDIR:-~}/.zsh_functions
+
