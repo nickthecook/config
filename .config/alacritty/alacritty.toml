@@ -1,40 +1,15 @@
-[window]
-dimensions = { columns = 120, lines = 30 }
-padding = { x = 10, y = 10 }
-dynamic_padding = true
-decorations = "None"
-opacity = 0.9
-blur = true
+import = [
+  "~/.config/alacritty/themes/themes/catppuccin_latte.toml",
+  "~/.config/alacritty/common.toml"
+]
 
-[scrolling]
-history = 10000
+[window]
+opacity = 1
+decorations = "Full"
 
 [font]
-normal = { family = "JetBrainsMonoNerdFont", style = "Light" }
-bold = { family = "JetBrainsMonoNerdFont", style = "Bold" }
-italic = { family = "JetBrainsMonoNerdFont", style = "BoldItalic" }
+normal = { family = "FiraCodeNerdFontMono", style = "Regular" }
+bold = { family = "FiraCodeNerdFontMono", style = "Regular" }
+italic = { family = "FiraCodeNerdFontMono", style = "BoldItalic" }
+size = 8
 
-[colors]
-transparent_background_colors = true
-
-[cursor]
-style = { shape = "Block", blinking = "On" }
-blink_timeout = 0
-unfocused_hollow = true
-
-[mouse]
-hide_when_typing = true
-
-[keyboard]
-bindings = [
-  { key = "D", mods = "Alt", chars = "\u0002%"  },
-  { key = "D", mods = "Alt|Shift", chars = "\u0002\""  },
-  { key = "Up", mods = "Alt|Super", chars = "\u0002\u001b\u005b\u0041"  },
-  { key = "Down", mods = "Alt|Super", chars = "\u0002\u001b\u005b\u0042"  },
-]
-
-[shell]
-program = "/home/linuxbrew/.linuxbrew/bin/tmux"
-args = [
-  "new-session"
-]

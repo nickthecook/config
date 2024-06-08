@@ -87,12 +87,7 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 export PATH="$PATH:$HOME/versions/3.7.7/bin"
 
-# ruby
-source /usr/local/share/chruby/chruby.sh
-chruby 3.2.2
-alias be="bundle exec"
-export EJSON_KEYDIR=~/.ejson
-alias "ssh=ssh -A"
+source .ruby.zsh
 
 export THOR_MERGE="code -d $1 $2"
 export EDITOR="vim"
@@ -105,7 +100,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+source "$HOME/.cargo/env"
 ## end custom
-
 
 fpath+=${ZDOTDIR:-~}/.zsh_functions

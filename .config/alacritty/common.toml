@@ -1,0 +1,40 @@
+[window]
+dimensions = { columns = 120, lines = 30 }
+padding = { x = 10, y = 5 }
+dynamic_padding = true
+decorations = "None"
+opacity = 0.9
+blur = true
+
+[scrolling]
+history = 10000
+
+[font]
+normal = { family = "JetBrainsMonoNerdFont", style = "Light" }
+bold = { family = "JetBrainsMonoNerdFont", style = "Bold" }
+italic = { family = "JetBrainsMonoNerdFont", style = "BoldItalic" }
+
+[colors]
+transparent_background_colors = true
+
+[cursor]
+style = { shape = "Block", blinking = "On" }
+blink_timeout = 0
+unfocused_hollow = true
+
+[mouse]
+hide_when_typing = true
+
+[keyboard]
+bindings = [
+  { key = "D", mods = "Alt", chars = "\u0002%"  },
+  { key = "D", mods = "Alt|Shift", chars = "\u0002\""  },
+  { key = "Up", mods = "Alt|Super", chars = "\u0002\u001b\u005b\u0041"  },
+  { key = "Down", mods = "Alt|Super", chars = "\u0002\u001b\u005b\u0042"  },
+]
+
+[shell]
+program = "tmux"
+args = [
+  "new-session"
+]
