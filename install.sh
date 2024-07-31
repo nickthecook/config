@@ -3,7 +3,7 @@
 #   move any existing file under the same relative path under the home dir out of the way
 #   link the repo file into its place
 
-for file in `find -type f | grep -v '^\./\.git/' | sed 's:^\./::g'`; do
+for file in `find . -type f | grep -v '^\./\.git/' | sed 's:^\./::g'`; do
   [ "$file" == "README.md" -o "$file" == "install.sh" ] && continue
 
   home_path="$HOME/$file"
