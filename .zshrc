@@ -18,11 +18,11 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 
 # zinit snippets
-zinit snippet OMZP::git
-zinit snippet OMZP::sudo
-zinit snippet OMZP::command-not-found
+#zinit snippet OMZP::git
+#zinit snippet OMZP::sudo
+#zinit snippet OMZP::command-not-found
 
-autoload -U compinit && compinit
+autoload -U compinit && compinit -u
 
 #zinit cdreplay -q
 
@@ -56,7 +56,7 @@ setopt hist_find_no_dups
 # completions
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
+#zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # aliases
 alias ls="ls --color"
@@ -71,6 +71,8 @@ alias la="ls -a"
 ## custom
 #
 DEFAULT_USER=nickthecook
+
+export EJSON_KEYDIR="$HOME/.ejson"
 
 export PATH="$HOME/bin:/home/linuxbrew/.linuxbrew/bin:$PATH:/opt/android-platform-tools"
 

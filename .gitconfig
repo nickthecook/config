@@ -1,5 +1,5 @@
 [core]
-    pager = delta
+	pager = less -FRX
 
 [interactive]
     diffFilter = delta --color-only
@@ -20,3 +20,9 @@
 [user]
 	name = nickthecook
 	email = nickthecook@gmail.com
+[alias]
+	co = checkout
+[pager]
+	branch = less
+[push]
+	autoSetupRemote = true
