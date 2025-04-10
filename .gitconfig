@@ -22,6 +22,7 @@
 	email = nickthecook@gmail.com
 [alias]
 	co = checkout
+	ol = log --pretty=oneline --abbrev-commit
 [pager]
 	branch = less
 [push]
