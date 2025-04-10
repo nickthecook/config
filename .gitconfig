@@ -19,7 +19,7 @@
 
 [user]
 	name = nickthecook
-	email = nickthecook@gmail.com
+	email = nickthecook@hey.com
 [alias]
 	co = checkout
 	ol = log --pretty=oneline --abbrev-commit
