@@ -15,7 +15,6 @@ source "$ZINIT_HOME/zinit.zsh"
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
-zinit light Aloxaf/fzf-tab
 
 # zinit snippets
 #zinit snippet OMZP::git
@@ -41,6 +40,7 @@ zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 bindkey "[5~" up-line-or-beginning-search # Up
 bindkey "[6~" down-line-or-beginning-search # Down
+#bindkey "	" complete-word
 
 # history
 HISTSIZE=1000
@@ -55,13 +55,15 @@ setopt hist_find_no_dups
 
 # completions
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-zstyle ':completion:*' menu no
+zstyle ':completion:*' menu no-select
 #zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
+zinit light Aloxaf/fzf-tab
 
 # aliases
 alias ls="ls --color"
 alias ll="ls -lh"
 alias la="ls -a"
+alias grep="grep --color=auto"
 
 # shell integrations
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -103,4 +105,8 @@ export NVM_DIR="$HOME/.nvm"
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 
 eval "$(starship init zsh)"
+
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+  source /etc/profile.d/vte.sh
+fi
 
