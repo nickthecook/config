@@ -81,7 +81,7 @@ export PATH="$HOME/bin:/home/linuxbrew/.linuxbrew/bin:$PATH:/opt/android-platfor
 alias dev="ops -f ~/src/ops.yml"
 alias rmtly="ops -f ~/src/rmtly/ops.yml"
 alias rails="ops rails"
-alias docker=podman
+#alias docker=podman
 
 # python
 if command -v pyenv 1>/dev/null 2>&1; then
@@ -99,7 +99,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-#source "$HOME/.cargo/env"
+source "$HOME/.cargo/env"
 ## end custom
 
 fpath+=${ZDOTDIR:-~}/.zsh_functions
