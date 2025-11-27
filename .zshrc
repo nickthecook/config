@@ -1,6 +1,11 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# fix suggested by tilix to start new shells in the previous shell's working dir
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+  source /etc/profile.d/vte-2.91.sh
+fi
+
 # Created by newuser for 5.9
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
@@ -90,6 +95,7 @@ fi
 export PATH="$PATH:$HOME/versions/3.7.7/bin"
 
 source "$HOME/.ruby.zsh"
+source "$HOME/.local.zsh"
 
 export THOR_MERGE="code -d $1 $2"
 export EDITOR="vim"
@@ -106,6 +112,7 @@ fpath+=${ZDOTDIR:-~}/.zsh_functions
 
 eval "$(starship init zsh)"
 
+<<<<<<< Updated upstream
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
   source /etc/profile.d/vte-2.91.sh
 fi
